@@ -1,0 +1,30 @@
+{
+  "name": "popular-npm-modules-metadata-explorer",
+  "version": "0.1.0",
+  "description": "Get the package.json files of the top 1000 modules on the NPM registry, and make them available for inspection",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx coffee --compile --bare index.coffee",
+    "start": "node --interactive --eval \"require('coffeescript/register'); let packages; (async function() { packages = await require('.')(); })();\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "package.json",
+    "metadata",
+    "popular",
+    "research"
+  ],
+  "author": "Geoffrey Booth <webmaster@geoffreybooth.com>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "coffeescript": "^2.3.2",
+    "del": "^3.0.0",
+    "filenamify": "^2.1.0",
+    "mz": "^2.7.0",
+    "package-json": "^5.0.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
